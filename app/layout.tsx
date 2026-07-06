@@ -24,13 +24,13 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Ini Title",
+  title: "Ayosehat",
   description:
     "Ayo Sehat Kementerian Kesehatan Republik Indonesia, portal statis berisi informasi kesehatan, siklus hidup, topik A-Z, kampanye, dan artikel terbaru.",
   keywords: ["Ayo Sehat", "Kemenkes", "kesehatan", "siklus hidup", "artikel kesehatan"],
   metadataBase: new URL("https://ayosehat.kemkes.go.id"),
   openGraph: {
-    title: "Ini Title",
+    title: "Ayosehat",
     description:
       "Portal informasi kesehatan untuk masyarakat Indonesia dari Kementerian Kesehatan Republik Indonesia.",
     type: "website",

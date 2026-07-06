@@ -106,7 +106,7 @@ var __TURBOPACK__imported__module__$5b$next$5d2f$internal$2f$font$2f$google$2f$i
 ;
 ;
 const metadata = {
-    title: "Ini Title",
+    title: "Ayosehat",
     description: "Ayo Sehat Kementerian Kesehatan Republik Indonesia, portal statis berisi informasi kesehatan, siklus hidup, topik A-Z, kampanye, dan artikel terbaru.",
     keywords: [
         "Ayo Sehat",
@@ -117,7 +117,7 @@ const metadata = {
     ],
     metadataBase: new URL("https://ayosehat.kemkes.go.id"),
     openGraph: {
-        title: "Ini Title",
+        title: "Ayosehat",
         description: "Portal informasi kesehatan untuk masyarakat Indonesia dari Kementerian Kesehatan Republik Indonesia.",
         type: "website",
         locale: "id_ID"
