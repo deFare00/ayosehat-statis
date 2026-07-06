@@ -1218,14 +1218,103 @@ h2 {
     margin: 36px auto 0;
   }
 
-  .habit-item, .habit-list:last-child .habit-item {
-    text-align: left;
-    grid-template-columns: 46px 1fr;
+  .habit-container {
+    width: min(100% - 28px, 1140px);
   }
 
-  .habit-item span {
-    width: 46px;
-    height: 46px;
+  .habits h1 {
+    margin-bottom: 16px;
+    font-size: 34px;
+    line-height: 1.15;
+  }
+
+  .habit-intro {
+    max-width: 34rem;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .habit-intro br {
+    display: none;
+  }
+
+  .habit-layout {
+    align-items: stretch;
+    gap: 0;
+    margin: 28px 0 30px;
+  }
+
+  .habit-layout .habit-list {
+    gap: 0;
+  }
+
+  .habit-layout .habit-list:first-child {
+    order: 2;
+  }
+
+  .habit-layout .habit-list:last-child {
+    order: 3;
+  }
+
+  .habit-image {
+    aspect-ratio: 1;
+    order: 1;
+    width: min(76vw, 280px);
+    height: auto;
+    margin: 0 auto 18px;
+  }
+
+  .habit-item, .habit-item.is-left, .habit-item.is-right, .habit-list:last-child .habit-item {
+    text-align: left;
+    border-bottom: 1px solid #18b3ab2e;
+    grid-template-columns: 56px minmax(0, 1fr);
+    align-items: start;
+    gap: 14px;
+    padding: 14px 0;
+  }
+
+  .habit-layout .habit-list:first-child .habit-item:first-child {
+    border-top: 1px solid #18b3ab2e;
+  }
+
+  .habit-item > div, .habit-item.is-left > div, .habit-item.is-right > div {
+    order: 2;
+  }
+
+  .habit-icon, .habit-item.is-left .habit-icon, .habit-item.is-right .habit-icon {
+    order: 1;
+  }
+
+  .habit-icon {
+    border-radius: 14px;
+    width: 56px;
+    height: 56px;
+  }
+
+  .habit-icon img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .habit-item h3 {
+    margin-bottom: 6px;
+    font-size: 16px;
+    line-height: 1.25;
+  }
+
+  .habit-item p {
+    font-size: 13px;
+    line-height: 1.45;
+  }
+
+  .habits .wide {
+    text-align: center;
+    border-radius: 14px;
+    height: auto;
+    min-height: 56px;
+    padding: 12px 18px;
+    font-size: 17px;
+    line-height: 22px;
   }
 
   .wide {
