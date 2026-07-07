@@ -1,35 +1,23 @@
 "use client";
 
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const menuItems = [
-  { label: "Tentang", icon: "/images/info-circle.svg", href: "#tentang" },
-  { label: "Topik", icon: "/images/category.svg", href: "#topik" },
-  { label: "Siklus Hidup", icon: "/images/3-user.svg", href: "#siklus-hidup" },
-  { label: "Hidup Sehat", icon: "/images/heart.svg", href: "#hidup-sehat" },
-  { label: "Kampanye", icon: "/images/activity.svg", href: "#kampanye" },
-  { label: "Kegiatan", icon: "/images/calendar.svg", href: "#kegiatan" },
-  { label: "Download", icon: "/images/download.svg", href: "#download" },
-  { label: "Kemitraan", icon: "/images/Document.svg", href: "#kemitraan" }
+  { label: "Tentang", icon: "/images/info-circle.svg", href: "/tentang", activePath: "/tentang" },
+  { label: "Topik", icon: "/images/category.svg", href: "/#topik" },
+  { label: "Siklus Hidup", icon: "/images/3-user.svg", href: "/#siklus-hidup" },
+  { label: "Hidup Sehat", icon: "/images/heart.svg", href: "/#hidup-sehat" },
+  { label: "Kampanye", icon: "/images/activity.svg", href: "/#kampanye" },
+  { label: "Kegiatan", icon: "/images/calendar.svg", href: "/#kegiatan" },
+  { label: "Download", icon: "/images/download.svg", href: "/#download" },
+  { label: "Kemitraan", icon: "/images/Document.svg", href: "/#kemitraan" }
 ];
 
 export default function NavMenu() {
-  const [activeHref, setActiveHref] = useState("#tentang");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const updateActiveFromHash = () => {
-      if (window.location.hash) {
-        setActiveHref(window.location.hash);
-      }
-    };
-
-    updateActiveFromHash();
-    window.addEventListener("hashchange", updateActiveFromHash);
-
-    return () => window.removeEventListener("hashchange", updateActiveFromHash);
-  }, []);
+  const pathname = usePathname();
 
   useEffect(() => {
     document.body.classList.toggle("mobile-menu-open", isMenuOpen);
@@ -38,21 +26,22 @@ export default function NavMenu() {
   }, [isMenuOpen]);
 
   const renderMenuLinks = () =>
-    menuItems.map((item) => (
-      <a
-        className={activeHref === item.href ? "active" : ""}
-        href={item.href}
-        key={item.label}
-        aria-current={activeHref === item.href ? "page" : undefined}
-        onClick={() => {
-          setActiveHref(item.href);
-          setIsMenuOpen(false);
-        }}
-      >
-        <Image className="menu-icon" src={item.icon} alt="" width={42} height={42} sizes="(max-width: 760px) 40px, 42px" aria-hidden="true" />
-        <span>{item.label}</span>
-      </a>
-    ));
+    menuItems.map((item) => {
+      const isActive = item.activePath === pathname;
+
+      return (
+        <a
+          className={isActive ? "active" : ""}
+          href={item.href}
+          key={item.label}
+          aria-current={isActive ? "page" : undefined}
+          onClick={() => setIsMenuOpen(false)}
+        >
+          <Image className="menu-icon" src={item.icon} alt="" width={42} height={42} sizes="(max-width: 760px) 40px, 42px" aria-hidden="true" />
+          <span>{item.label}</span>
+        </a>
+      );
+    });
 
   return (
     <div className="nav-menu">
