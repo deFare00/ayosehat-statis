@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import NavMenu from "../NavMenu";
 import { topicsData } from "./data";
 
@@ -18,6 +18,17 @@ const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 export default function TopikPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedLetter, setSelectedLetter] = useState<string | null>(null);
+
+  // Hydrate search query from URL search parameters on mount
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      const search = params.get("search") || params.get("keyword");
+      if (search) {
+        setSearchQuery(decodeURIComponent(search));
+      }
+    }
+  }, []);
 
   // Filter topics based on search and letter
   const filteredData = useMemo(() => {

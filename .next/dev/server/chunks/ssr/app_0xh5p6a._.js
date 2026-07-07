@@ -926,6 +926,11 @@ const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 function TopikPage() {
     const [searchQuery, setSearchQuery] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
     const [selectedLetter, setSelectedLetter] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
+    // Hydrate search query from URL search parameters on mount
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        if ("TURBOPACK compile-time falsy", 0) //TURBOPACK unreachable
+        ;
+    }, []);
     // Filter topics based on search and letter
     const filteredData = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useMemo"])(()=>{
         const data = {};
@@ -987,12 +992,12 @@ function TopikPage() {
                                         "aria-hidden": "true"
                                     }, void 0, false, {
                                         fileName: "[project]/app/topik/page.tsx",
-                                        lineNumber: 76,
+                                        lineNumber: 87,
                                         columnNumber: 15
                                     }, this)
                                 }, item.label, false, {
                                     fileName: "[project]/app/topik/page.tsx",
-                                    lineNumber: 75,
+                                    lineNumber: 86,
                                     columnNumber: 13
                                 }, this)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -1001,7 +1006,7 @@ function TopikPage() {
                                 children: "Kontak"
                             }, void 0, false, {
                                 fileName: "[project]/app/topik/page.tsx",
-                                lineNumber: 79,
+                                lineNumber: 90,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -1017,26 +1022,26 @@ function TopikPage() {
                                         "aria-hidden": "true"
                                     }, void 0, false, {
                                         fileName: "[project]/app/topik/page.tsx",
-                                        lineNumber: 81,
+                                        lineNumber: 92,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         children: "Login"
                                     }, void 0, false, {
                                         fileName: "[project]/app/topik/page.tsx",
-                                        lineNumber: 82,
+                                        lineNumber: 93,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/topik/page.tsx",
-                                lineNumber: 80,
+                                lineNumber: 91,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/topik/page.tsx",
-                        lineNumber: 73,
+                        lineNumber: 84,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
@@ -1056,29 +1061,29 @@ function TopikPage() {
                                     priority: true
                                 }, void 0, false, {
                                     fileName: "[project]/app/topik/page.tsx",
-                                    lineNumber: 87,
+                                    lineNumber: 98,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/topik/page.tsx",
-                                lineNumber: 86,
+                                lineNumber: 97,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$NavMenu$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                                 fileName: "[project]/app/topik/page.tsx",
-                                lineNumber: 89,
+                                lineNumber: 100,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/topik/page.tsx",
-                        lineNumber: 85,
+                        lineNumber: 96,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/topik/page.tsx",
-                lineNumber: 72,
+                lineNumber: 83,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
@@ -1094,7 +1099,7 @@ function TopikPage() {
                                     children: "Topik Kesehatan A-Z"
                                 }, void 0, false, {
                                     fileName: "[project]/app/topik/page.tsx",
-                                    lineNumber: 97,
+                                    lineNumber: 108,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1102,7 +1107,7 @@ function TopikPage() {
                                     children: "Temukan berbagai informasi kesehatan secara lengkap dan terpercaya dengan mencarinya di bawah ini."
                                 }, void 0, false, {
                                     fileName: "[project]/app/topik/page.tsx",
-                                    lineNumber: 98,
+                                    lineNumber: 109,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1130,7 +1135,7 @@ function TopikPage() {
                                                                 r: "8"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/topik/page.tsx",
-                                                                lineNumber: 107,
+                                                                lineNumber: 118,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
@@ -1140,18 +1145,18 @@ function TopikPage() {
                                                                 y2: "16.65"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/topik/page.tsx",
-                                                                lineNumber: 108,
+                                                                lineNumber: 119,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/topik/page.tsx",
-                                                        lineNumber: 106,
+                                                        lineNumber: 117,
                                                         columnNumber: 19
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/topik/page.tsx",
-                                                    lineNumber: 105,
+                                                    lineNumber: 116,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -1162,7 +1167,7 @@ function TopikPage() {
                                                     "aria-label": "Cari Topik Kesehatan"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/topik/page.tsx",
-                                                    lineNumber: 111,
+                                                    lineNumber: 122,
                                                     columnNumber: 17
                                                 }, this),
                                                 searchQuery && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1172,13 +1177,13 @@ function TopikPage() {
                                                     children: "×"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/topik/page.tsx",
-                                                    lineNumber: 119,
+                                                    lineNumber: 130,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/topik/page.tsx",
-                                            lineNumber: 104,
+                                            lineNumber: 115,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1195,30 +1200,30 @@ function TopikPage() {
                                                     children: letter
                                                 }, letter, false, {
                                                     fileName: "[project]/app/topik/page.tsx",
-                                                    lineNumber: 132,
+                                                    lineNumber: 143,
                                                     columnNumber: 21
                                                 }, this);
                                             })
                                         }, void 0, false, {
                                             fileName: "[project]/app/topik/page.tsx",
-                                            lineNumber: 126,
+                                            lineNumber: 137,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/topik/page.tsx",
-                                    lineNumber: 102,
+                                    lineNumber: 113,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/topik/page.tsx",
-                            lineNumber: 96,
+                            lineNumber: 107,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/topik/page.tsx",
-                        lineNumber: 95,
+                        lineNumber: 106,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -1240,7 +1245,7 @@ function TopikPage() {
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/topik/page.tsx",
-                                            lineNumber: 153,
+                                            lineNumber: 164,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1249,13 +1254,13 @@ function TopikPage() {
                                             children: "Reset Filter"
                                         }, void 0, false, {
                                             fileName: "[project]/app/topik/page.tsx",
-                                            lineNumber: 159,
+                                            lineNumber: 170,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/topik/page.tsx",
-                                    lineNumber: 152,
+                                    lineNumber: 163,
                                     columnNumber: 15
                                 }, this),
                                 hasResults ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1274,7 +1279,7 @@ function TopikPage() {
                                                     children: letter
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/topik/page.tsx",
-                                                    lineNumber: 179,
+                                                    lineNumber: 190,
                                                     columnNumber: 25
                                                 }, this),
                                                 isLetterEmpty ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1282,7 +1287,7 @@ function TopikPage() {
                                                     children: "Tidak Ada Topik"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/topik/page.tsx",
-                                                    lineNumber: 182,
+                                                    lineNumber: 193,
                                                     columnNumber: 27
                                                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
                                                     className: "topik-item-list",
@@ -1296,7 +1301,7 @@ function TopikPage() {
                                                                         children: topic.name
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/topik/page.tsx",
-                                                                        lineNumber: 188,
+                                                                        lineNumber: 199,
                                                                         columnNumber: 35
                                                                     }, this),
                                                                     topic.isNew && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1304,35 +1309,35 @@ function TopikPage() {
                                                                         children: "Baru"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/topik/page.tsx",
-                                                                        lineNumber: 189,
+                                                                        lineNumber: 200,
                                                                         columnNumber: 51
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/topik/page.tsx",
-                                                                lineNumber: 187,
+                                                                lineNumber: 198,
                                                                 columnNumber: 33
                                                             }, this)
                                                         }, topic.name, false, {
                                                             fileName: "[project]/app/topik/page.tsx",
-                                                            lineNumber: 186,
+                                                            lineNumber: 197,
                                                             columnNumber: 31
                                                         }, this))
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/topik/page.tsx",
-                                                    lineNumber: 184,
+                                                    lineNumber: 195,
                                                     columnNumber: 27
                                                 }, this)
                                             ]
                                         }, letter, true, {
                                             fileName: "[project]/app/topik/page.tsx",
-                                            lineNumber: 174,
+                                            lineNumber: 185,
                                             columnNumber: 23
                                         }, this);
                                     })
                                 }, void 0, false, {
                                     fileName: "[project]/app/topik/page.tsx",
-                                    lineNumber: 166,
+                                    lineNumber: 177,
                                     columnNumber: 15
                                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "topik-empty-results",
@@ -1341,14 +1346,14 @@ function TopikPage() {
                                             children: "Topik Tidak Ditemukan"
                                         }, void 0, false, {
                                             fileName: "[project]/app/topik/page.tsx",
-                                            lineNumber: 201,
+                                            lineNumber: 212,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                             children: "Maaf, tidak ada topik kesehatan yang sesuai dengan kata kunci pencarian Anda."
                                         }, void 0, false, {
                                             fileName: "[project]/app/topik/page.tsx",
-                                            lineNumber: 202,
+                                            lineNumber: 213,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1357,30 +1362,30 @@ function TopikPage() {
                                             children: "Tampilkan Semua Topik"
                                         }, void 0, false, {
                                             fileName: "[project]/app/topik/page.tsx",
-                                            lineNumber: 203,
+                                            lineNumber: 214,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/topik/page.tsx",
-                                    lineNumber: 200,
+                                    lineNumber: 211,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/topik/page.tsx",
-                            lineNumber: 149,
+                            lineNumber: 160,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/topik/page.tsx",
-                        lineNumber: 148,
+                        lineNumber: 159,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/topik/page.tsx",
-                lineNumber: 93,
+                lineNumber: 104,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("footer", {
@@ -1402,12 +1407,12 @@ function TopikPage() {
                                         sizes: "220px"
                                     }, void 0, false, {
                                         fileName: "[project]/app/topik/page.tsx",
-                                        lineNumber: 216,
+                                        lineNumber: 227,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/topik/page.tsx",
-                                    lineNumber: 215,
+                                    lineNumber: 226,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1416,26 +1421,26 @@ function TopikPage() {
                                             children: "Ayo Sehat"
                                         }, void 0, false, {
                                             fileName: "[project]/app/topik/page.tsx",
-                                            lineNumber: 218,
+                                            lineNumber: 229,
                                             columnNumber: 16
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                             fileName: "[project]/app/topik/page.tsx",
-                                            lineNumber: 218,
+                                            lineNumber: 229,
                                             columnNumber: 42
                                         }, this),
                                         "Kementerian Kesehatan Republik Indonesia"
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/topik/page.tsx",
-                                    lineNumber: 218,
+                                    lineNumber: 229,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                     children: "Jl. H.R. Rasuna Said Blok X5 Kav. 4-9 Jakarta Selatan, DKI Jakarta"
                                 }, void 0, false, {
                                     fileName: "[project]/app/topik/page.tsx",
-                                    lineNumber: 219,
+                                    lineNumber: 230,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -1444,7 +1449,7 @@ function TopikPage() {
                                     children: "Chatbot WhatsApp Ayo Sehat"
                                 }, void 0, false, {
                                     fileName: "[project]/app/topik/page.tsx",
-                                    lineNumber: 220,
+                                    lineNumber: 231,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1452,7 +1457,7 @@ function TopikPage() {
                                     children: "Media Sosial"
                                 }, void 0, false, {
                                     fileName: "[project]/app/topik/page.tsx",
-                                    lineNumber: 221,
+                                    lineNumber: 232,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1471,23 +1476,23 @@ function TopikPage() {
                                                 "aria-hidden": "true"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/topik/page.tsx",
-                                                lineNumber: 225,
+                                                lineNumber: 236,
                                                 columnNumber: 19
                                             }, this)
                                         }, item.label, false, {
                                             fileName: "[project]/app/topik/page.tsx",
-                                            lineNumber: 224,
+                                            lineNumber: 235,
                                             columnNumber: 17
                                         }, this))
                                 }, void 0, false, {
                                     fileName: "[project]/app/topik/page.tsx",
-                                    lineNumber: 222,
+                                    lineNumber: 233,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/topik/page.tsx",
-                            lineNumber: 214,
+                            lineNumber: 225,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(FooterColumn, {
@@ -1499,7 +1504,7 @@ function TopikPage() {
                             ]
                         }, void 0, false, {
                             fileName: "[project]/app/topik/page.tsx",
-                            lineNumber: 230,
+                            lineNumber: 241,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(FooterColumn, {
@@ -1513,7 +1518,7 @@ function TopikPage() {
                             ]
                         }, void 0, false, {
                             fileName: "[project]/app/topik/page.tsx",
-                            lineNumber: 231,
+                            lineNumber: 242,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(FooterColumn, {
@@ -1525,18 +1530,18 @@ function TopikPage() {
                             ]
                         }, void 0, false, {
                             fileName: "[project]/app/topik/page.tsx",
-                            lineNumber: 232,
+                            lineNumber: 243,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/topik/page.tsx",
-                    lineNumber: 213,
+                    lineNumber: 224,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/topik/page.tsx",
-                lineNumber: 212,
+                lineNumber: 223,
                 columnNumber: 7
             }, this)
         ]
@@ -1549,7 +1554,7 @@ function FooterColumn({ title, items }) {
                 children: title
             }, void 0, false, {
                 fileName: "[project]/app/topik/page.tsx",
-                lineNumber: 242,
+                lineNumber: 253,
                 columnNumber: 7
             }, this),
             items.map((item)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -1557,13 +1562,13 @@ function FooterColumn({ title, items }) {
                     children: item
                 }, item, false, {
                     fileName: "[project]/app/topik/page.tsx",
-                    lineNumber: 243,
+                    lineNumber: 254,
                     columnNumber: 28
                 }, this))
         ]
     }, void 0, true, {
         fileName: "[project]/app/topik/page.tsx",
-        lineNumber: 241,
+        lineNumber: 252,
         columnNumber: 5
     }, this);
 }

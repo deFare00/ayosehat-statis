@@ -1,3 +1,0 @@
-module.exports=[33354,(a,b,c)=>{"use strict";c._=function(a){return a&&a.__esModule?a:{default:a}}},55415,a=>{"use strict";var b=a.i(87924),c=a.i(72131);a.s(["default",0,function({topics:a}){let[d,e]=(0,c.useState)(null);return(0,b.jsx)(b.Fragment,{children:a.map(a=>(0,b.jsx)("a",{className:d===a?"active":"",href:"#topik",onClick:()=>e(a),children:a},a))})}])}];
-
-//# sourceMappingURL=_1ziye7m._.js.map

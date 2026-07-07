@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import NavMenu from "./NavMenu";
 import PopularTopics from "./PopularTopics";
+import SearchForm from "./SearchForm";
 const socialLinks = [
   { label: "Instagram", icon: "/images/instagram.svg" },
   { label: "Facebook", icon: "/images/facebook.svg" },
@@ -106,11 +107,7 @@ export default function Home() {
           <div className="container center">
             <h2 id="search-title">Pencarian Ayosehat</h2>
             <p>Pendekatan menjaga kesehatan sejak lahir hingga lansia, dengan</p>
-            <form className="search-form" action="#topik" role="search">
-              <label className="sr-only" htmlFor="keyword">Kata kunci</label>
-              <input id="keyword" name="keyword" type="search" placeholder="Ketikan kata kunci Anda di sini" />
-              <button type="submit">Cari</button>
-            </form>
+            <SearchForm />
             <div className="chips" aria-label="Topik populer">
               <span>Topik populer:</span>
               <PopularTopics topics={topics} />
