@@ -165,7 +165,7 @@ img {
   align-items: center;
   justify-content: space-between;
   gap: 54px;
-  width: min(1550px, calc(100% - 88px));
+  width: min(1140px, calc(100% - 40px));
   min-height: 138px;
   margin: 0 auto;
   padding: 14px 0 13px;
@@ -225,9 +225,9 @@ img {
   align-items: center;
   justify-content: space-between;
   flex: 1;
-  gap: 28px;
+  gap: 12px;
   color: #00a9a7;
-  font-size: 18px;
+  font-size: 14.5px;
   font-weight: 600;
   line-height: 20px;
   text-transform: uppercase;
@@ -253,11 +253,11 @@ img {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 14px;
-  width: 113px;
+  gap: 12px;
+  width: 94px;
   height: 112px;
-  flex: 0 0 113px;
-  padding: 18px 14px 19px;
+  flex: 0 0 94px;
+  padding: 16px 6px;
   border-radius: 15px;
   text-align: center;
   letter-spacing: 0;
@@ -280,8 +280,8 @@ img {
 }
 
 .menu-icon {
-  width: var(--icon-md);
-  height: var(--icon-md);
+  width: 34px;
+  height: 34px;
   object-fit: contain;
   transition: filter 200ms var(--ease-out), transform 200ms var(--ease-out);
 }
@@ -299,7 +299,7 @@ img {
 .hero {
   position: relative;
   overflow: hidden;
-  min-height: 790px;
+  min-height: 500px;
   background-image: url("/images/main-hero.png");
   background-position: center;
   background-repeat: no-repeat;
@@ -310,7 +310,7 @@ img {
 .hero-content {
   display: flex;
   align-items: center;
-  min-height: 790px;
+  min-height: 500px;
 }
 
 .hero-copy {
@@ -377,7 +377,7 @@ img {
 
 .hero-copy h2 {
   max-width: 720px;
-  margin: 0 0 32px;
+  margin: 0 0 16px;
   color: var(--white);
   font-family: var(--font-poppins), Poppins, Arial, Helvetica, sans-serif;
   font-size: 50px;
@@ -388,7 +388,7 @@ img {
 
 .hero-copy p {
   max-width: 730px;
-  margin: 0 0 46px;
+  margin: 0 0 24px;
   color: var(--white);
   font-family: var(--font-poppins), Poppins, Arial, Helvetica, sans-serif;
   font-size: 20px;
@@ -1317,7 +1317,7 @@ h2 {
 
   .hero,
   .hero-content {
-    min-height: 640px;
+    min-height: 480px;
   }
 
   .habit-image {
@@ -1601,12 +1601,12 @@ h2 {
   }
 
   .hero {
-    min-height: 560px;
+    min-height: 440px;
     background-position: 58% center;
   }
 
   .hero-content {
-    min-height: 560px;
+    min-height: 440px;
     align-items: flex-start;
   }
 

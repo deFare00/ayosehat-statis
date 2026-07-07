@@ -224,8 +224,7 @@ export default function Home() {
         <div className="container footer-grid">
           <div>
             <Link className="brand footer-brand" href="/">
-              <span className="brand-mark" aria-hidden="true" />
-              <span>Kemenkes<br />Ayo Sehat</span>
+              <Image src="/images/kemenkes-ayosehat.png" alt="Kemenkes Ayo Sehat" width={220} height={66} sizes="220px" />
             </Link>
             <p><strong>Ayo Sehat</strong><br />Kementerian Kesehatan Republik Indonesia</p>
             <p>Jl. H.R. Rasuna Said Blok X5 Kav. 4-9 Jakarta Selatan, DKI Jakarta</p>

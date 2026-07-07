@@ -157,7 +157,7 @@ img {
   justify-content: space-between;
   align-items: center;
   gap: 54px;
-  width: min(1550px, 100% - 88px);
+  width: min(1140px, 100% - 40px);
   min-height: 138px;
   margin: 0 auto;
   padding: 14px 0 13px;
@@ -218,8 +218,8 @@ img {
   flex: 1;
   justify-content: space-between;
   align-items: center;
-  gap: 28px;
-  font-size: 18px;
+  gap: 12px;
+  font-size: 14.5px;
   font-weight: 600;
   line-height: 20px;
   display: flex;
@@ -238,7 +238,7 @@ img {
 .menu a {
   text-align: center;
   letter-spacing: 0;
-  width: 113px;
+  width: 94px;
   height: 112px;
   transition: color .2s var(--ease-out),
     background-color .2s var(--ease-out),
@@ -246,11 +246,11 @@ img {
     transform .2s var(--ease-out);
   border-radius: 15px;
   flex-direction: column;
-  flex: 0 0 113px;
+  flex: 0 0 94px;
   justify-content: center;
   align-items: center;
-  gap: 14px;
-  padding: 18px 14px 19px;
+  gap: 12px;
+  padding: 16px 6px;
   display: flex;
   position: relative;
   top: -7px;
@@ -268,9 +268,9 @@ img {
 }
 
 .menu-icon {
-  width: var(--icon-md);
-  height: var(--icon-md);
   object-fit: contain;
+  width: 34px;
+  height: 34px;
   transition: filter .2s var(--ease-out), transform .2s var(--ease-out);
 }
 
@@ -285,7 +285,7 @@ img {
 }
 
 .hero {
-  min-height: 790px;
+  min-height: 500px;
   animation: heroReveal .9s var(--ease-out) both;
   background-image: url("/images/main-hero.png");
   background-position: center;
@@ -297,7 +297,7 @@ img {
 
 .hero-content {
   align-items: center;
-  min-height: 790px;
+  min-height: 500px;
   display: flex;
 }
 
@@ -365,7 +365,7 @@ img {
   color: var(--white);
   font-family: var(--font-poppins), Poppins, Arial, Helvetica, sans-serif;
   letter-spacing: 0;
-  margin: 0 0 32px;
+  margin: 0 0 16px;
   font-size: 50px;
   font-weight: 500;
   line-height: 1.18;
@@ -375,7 +375,7 @@ img {
   max-width: 730px;
   color: var(--white);
   font-family: var(--font-poppins), Poppins, Arial, Helvetica, sans-serif;
-  margin: 0 0 46px;
+  margin: 0 0 24px;
   font-size: 20px;
   font-weight: 400;
   line-height: 1.5;
@@ -1284,7 +1284,7 @@ h2 {
   }
 
   .hero, .hero-content {
-    min-height: 640px;
+    min-height: 480px;
   }
 
   .habit-image {
@@ -1561,12 +1561,12 @@ h2 {
 
   .hero {
     background-position: 58%;
-    min-height: 560px;
+    min-height: 440px;
   }
 
   .hero-content {
     align-items: flex-start;
-    min-height: 560px;
+    min-height: 440px;
   }
 
   .hero-copy {
