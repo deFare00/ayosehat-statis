@@ -6,6 +6,7 @@ import { useState } from "react";
 import NavMenu from "./NavMenu";
 import PopularTopics from "./PopularTopics";
 import SearchForm from "./SearchForm";
+import CampaignSlider from "./CampaignSlider";
 import { topicsData } from "./topik/data";
 const socialLinks = [
   { label: "Instagram", icon: "/images/instagram.svg" },
@@ -378,11 +379,7 @@ export default function Home() {
                   </div>
                 </article>
               </div>
-              <article className="mini-panel">
-                <h3>Kampanye Kesehatan</h3>
-                <Image src="/images/campaign-ckg.svg" alt="Cek Kesehatan Gratis di Sekolah" width={270} height={150} sizes="(max-width: 1020px) 270px, 270px" />
-                <p>Cek Kesehatan Gratis (CKG) di Sekolah</p>
-              </article>
+              <CampaignSlider />
             </aside>
           </div>
         </section>
