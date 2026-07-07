@@ -1,8 +1,12 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 import NavMenu from "./NavMenu";
 import PopularTopics from "./PopularTopics";
 import SearchForm from "./SearchForm";
+import { topicsData } from "./topik/data";
 const socialLinks = [
   { label: "Instagram", icon: "/images/instagram.svg" },
   { label: "Facebook", icon: "/images/facebook.svg" },
@@ -64,6 +68,10 @@ const campaigns = [
 ];
 
 export default function Home() {
+  const [selectedLetter, setSelectedLetter] = useState<string>("A");
+  const [isExpanded, setIsExpanded] = useState<boolean>(true);
+  const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+
   return (
     <>
       <header className="site-header">
@@ -158,14 +166,86 @@ export default function Home() {
           <div className="container content-grid">
             <article className="az-panel">
               <h2 id="topic-title">Topik A-Z</h2>
-              <p>Temukan penyakit dan kondisi; hidup sehat; keselamatan di tempat kerja; kesehatan lingkungan, cedera, kekerasan, dan keselamatan.</p>
-              <div className="letters" aria-label="Daftar alfabet topik">
-                {"ABCDEFGHIJKLMNOPQRSTUVWXYZ#".split("").map((letter, index) => (
-                  <a className={index === 0 ? "selected" : ""} href="#artikel" key={letter}>{letter}</a>
-                ))}
+              <p>
+                Temukan penyakit dan kondisi; hidup sehat; keselamatan di tempat kerja; kesehatan lingkungan; cedera, kekerasan, dan keselamatan; kesehatan global; kesehatan pelancong, dan banyak lagi.
+              </p>
+              
+              <div className="letters-grid" role="group" aria-label="Filter berdasarkan huruf pertama">
+                {alphabet.map((letter) => {
+                  const topics = topicsData[letter] || [];
+                  const isAvailable = topics.length > 0;
+                  const isActive = selectedLetter === letter;
+                  
+                  return (
+                    <button
+                      key={letter}
+                      className={`letter-btn ${isActive ? "active" : ""} ${!isAvailable ? "disabled" : ""}`}
+                      onClick={() => {
+                        if (isAvailable) {
+                          if (selectedLetter === letter) {
+                            setIsExpanded(!isExpanded);
+                          } else {
+                            setSelectedLetter(letter);
+                            setIsExpanded(true);
+                          }
+                        }
+                      }}
+                      disabled={!isAvailable}
+                      aria-pressed={isActive}
+                    >
+                      {letter}
+                    </button>
+                  );
+                })}
               </div>
-              <Image className="topic-image" src="/images/doctor-notes.svg" alt="Dokter menulis catatan kesehatan" width={760} height={190} sizes="(max-width: 760px) calc(100vw - 68px), (max-width: 1020px) calc(100vw - 88px), 760px" />
+
+              {selectedLetter && (
+                <div className={`topics-accordion ${isExpanded ? "expanded" : "collapsed"}`}>
+                  <button 
+                    className="accordion-header" 
+                    onClick={() => setIsExpanded(!isExpanded)}
+                    aria-expanded={isExpanded}
+                  >
+                    <div className="accordion-title-wrapper">
+                      <span className="letter-badge">{selectedLetter}</span>
+                      <span className="accordion-title-text">Topik Kesehatan</span>
+                    </div>
+                    <span className={`accordion-icon ${isExpanded ? "up" : "down"}`}>
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                        <polyline points="18 15 12 9 6 15"></polyline>
+                      </svg>
+                    </span>
+                  </button>
+                  
+                  {isExpanded && (
+                    <div className="accordion-content">
+                      <div className="topics-preview-grid">
+                        {topicsData[selectedLetter]?.slice(0, 4).map((topic) => (
+                          <Link 
+                            key={topic.name} 
+                            href={`/topik/${encodeURIComponent(topic.name.toLowerCase())}`} 
+                            className="topic-preview-card"
+                          >
+                            <span className="topic-card-arrow">&gt;</span>
+                            <span className="topic-card-name">{topic.name}</span>
+                          </Link>
+                        ))}
+                      </div>
+                      
+                      <div className="accordion-footer">
+                        <Link 
+                          href={`/topik?letter=${selectedLetter}`} 
+                          className="view-all-link"
+                        >
+                          Lihat Semua ({topicsData[selectedLetter]?.length || 0} topik) &gt;
+                        </Link>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              )}
             </article>
+
             <aside className="side-stack" aria-label="Informasi kesehatan">
               <article className="mini-panel">
                 <h3>Kalender Kesehatan</h3>

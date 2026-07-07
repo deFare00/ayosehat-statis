@@ -19,13 +19,17 @@ export default function TopikPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedLetter, setSelectedLetter] = useState<string | null>(null);
 
-  // Hydrate search query from URL search parameters on mount
+  // Hydrate search query and selected letter from URL search parameters on mount
   useEffect(() => {
     if (typeof window !== "undefined") {
       const params = new URLSearchParams(window.location.search);
       const search = params.get("search") || params.get("keyword");
+      const letter = params.get("letter");
       if (search) {
         setSearchQuery(decodeURIComponent(search));
+      }
+      if (letter) {
+        setSelectedLetter(letter.toUpperCase());
       }
     }
   }, []);

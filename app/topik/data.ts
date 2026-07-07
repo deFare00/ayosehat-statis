@@ -7,14 +7,14 @@ export const topicsData: Record<string, TopicItem[]> = {
   A: [
     { name: "ADHD" },
     { name: "AIDS" },
+    { name: "Alzheimer" },
+    { name: "Alzheimer pada Lansia" },
     { name: "Akupunktur", isNew: true },
     { name: "Alergi" },
     { name: "Alergi Makanan" },
     { name: "Alergi Obat" },
     { name: "Alopesia" },
     { name: "Amandel" },
-    { name: "Ambien" },
-    { name: "Amnesia" },
     { name: "Anemia", isNew: true }
   ],
   B: [

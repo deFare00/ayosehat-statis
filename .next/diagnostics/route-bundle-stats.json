@@ -13,12 +13,12 @@
     ]
   },
   {
-    "route": "/topik",
-    "firstLoadUncompressedJsBytes": 548573,
+    "route": "/",
+    "firstLoadUncompressedJsBytes": 556480,
     "firstLoadChunkPaths": [
       ".next\\static\\chunks\\05-c3ty_6dwfk.js",
       ".next\\static\\chunks\\14mrh2-p_w84d.js",
-      ".next\\static\\chunks\\1ni08-7wz_lvg.js",
+      ".next\\static\\chunks\\0e5wao6f5_eid.js",
       ".next\\static\\chunks\\0iq1i69206cyl.js",
       ".next\\static\\chunks\\0xhu-pfsyvbmx.js",
       ".next\\static\\chunks\\0iec5q4ack_04.js",
@@ -26,12 +26,12 @@
     ]
   },
   {
-    "route": "/",
-    "firstLoadUncompressedJsBytes": 545324,
+    "route": "/topik",
+    "firstLoadUncompressedJsBytes": 548630,
     "firstLoadChunkPaths": [
       ".next\\static\\chunks\\05-c3ty_6dwfk.js",
       ".next\\static\\chunks\\14mrh2-p_w84d.js",
-      ".next\\static\\chunks\\2se8y5k-_bmmq.js",
+      ".next\\static\\chunks\\31y5-p8q-uoya.js",
       ".next\\static\\chunks\\0iq1i69206cyl.js",
       ".next\\static\\chunks\\0xhu-pfsyvbmx.js",
       ".next\\static\\chunks\\0iec5q4ack_04.js",
