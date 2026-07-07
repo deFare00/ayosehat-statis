@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import NavMenu from "./NavMenu";
+import PopularTopics from "./PopularTopics";
 const socialLinks = [
   { label: "Instagram", icon: "/images/instagram.svg" },
   { label: "Facebook", icon: "/images/facebook.svg" },
@@ -112,9 +113,7 @@ export default function Home() {
             </form>
             <div className="chips" aria-label="Topik populer">
               <span>Topik populer:</span>
-              {topics.map((topic, index) => (
-                <a className={index === 1 ? "active" : ""} href="#topik" key={topic}>{topic}</a>
-              ))}
+              <PopularTopics topics={topics} />
             </div>
           </div>
         </section>
