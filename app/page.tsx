@@ -191,7 +191,7 @@ export default function Home() {
           <div className="container">
             <div className="section-head">
               <h2 id="article-title">Artikel Terbaru</h2>
-              <a className="outline" href="#download">Lihat Artikel Lainnya</a>
+              <a className="outline" href="#download">LIHAT ARTIKEL LAINNYA</a>
             </div>
             <div className="article-grid">
               {articles.map(([title, tag, image]) => (
