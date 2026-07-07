@@ -2,5 +2,7 @@
   "/_global-error/page": "/_global-error",
   "/_not-found/page": "/_not-found",
   "/page": "/",
-  "/tentang/page": "/tentang"
+  "/siklus-hidup/page": "/siklus-hidup",
+  "/tentang/page": "/tentang",
+  "/topik/page": "/topik"
 }

@@ -45,6 +45,15 @@ type LayoutConfig<Route extends LayoutRoutes = LayoutRoutes> = {
   type __Unused = __Check
 }
 
+// Validate ../../../app/siklus-hidup/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/siklus-hidup">> = Specific
+  const handler = {} as typeof import("../../../app/siklus-hidup/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
 // Validate ../../../app/tentang/page.tsx
 {
   type __IsExpected<Specific extends AppPageConfig<"/tentang">> = Specific

@@ -2,5 +2,7 @@
   "/_global-error/page": "app/_global-error/page.js",
   "/_not-found/page": "app/_not-found/page.js",
   "/page": "app/page.js",
-  "/tentang/page": "app/tentang/page.js"
+  "/siklus-hidup/page": "app/siklus-hidup/page.js",
+  "/tentang/page": "app/tentang/page.js",
+  "/topik/page": "app/topik/page.js"
 }

@@ -32,7 +32,8 @@ const menuItems = [
     {
         label: "Siklus Hidup",
         icon: "/images/3-user.svg",
-        href: "/#siklus-hidup"
+        href: "/siklus-hidup",
+        activePath: "/siklus-hidup"
     },
     {
         label: "Hidup Sehat",

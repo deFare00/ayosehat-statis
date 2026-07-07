@@ -42,10 +42,22 @@
       "namedRegex": "^/_not\\-found(?:/)?$"
     },
     {
+      "page": "/siklus-hidup",
+      "regex": "^/siklus\\-hidup(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/siklus\\-hidup(?:/)?$"
+    },
+    {
       "page": "/tentang",
       "regex": "^/tentang(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/tentang(?:/)?$"
+    },
+    {
+      "page": "/topik",
+      "regex": "^/topik(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/topik(?:/)?$"
     }
   ],
   "dataRoutes": [],
