@@ -282,6 +282,18 @@ export default function Home() {
                   )}
                 </div>
               )}
+
+              {/* Divider and CTA Banner */}
+              <div className="topik-cta-divider"></div>
+              <div className="topik-cta-card">
+                <h2 className="topik-cta-title">Tidak Menemukan Topik yang Kamu Cari?</h2>
+                <p className="topik-cta-desc">
+                  Hubungi kami atau gunakan fitur pencarian untuk menemukan informasi kesehatan yang Kamu butuhkan
+                </p>
+                <Link href="#kontak" className="topik-cta-btn">
+                  Hubungi Kami
+                </Link>
+              </div>
             </article>
 
             <aside className="side-stack" aria-label="Informasi kesehatan">

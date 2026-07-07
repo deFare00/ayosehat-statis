@@ -2073,9 +2073,25 @@ h2 {
   }
 
   .life-grid {
-    grid-template-columns: 274px;
-    max-width: 274px;
-    margin: 36px auto 0;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    justify-content: flex-start;
+    gap: 20px;
+    width: auto;
+    max-width: none;
+    margin: 36px -14px 0;
+    padding: 16px 14px 28px;
+    display: flex;
+    overflow-x: auto;
+  }
+
+  .life-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .life-grid .life-card {
+    scroll-snap-align: center;
+    flex: none;
   }
 
   .habit-container {
@@ -3221,15 +3237,25 @@ button.siklus-tab-card:focus-visible {
   }
 
   .siklus-tab-grid {
+    scroll-snap-type: none;
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     gap: 16px;
+    width: 100%;
+    max-width: none;
     margin-top: 32px;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+    overflow-x: visible;
+    display: grid !important;
   }
 
   .life-card.siklus-tab-card {
     width: auto;
     height: auto;
     min-height: 200px;
+    scroll-snap-align: none !important;
+    flex: none !important;
   }
 
   .life-card.siklus-tab-card:before {
@@ -3749,6 +3775,71 @@ button.siklus-tab-card:focus-visible {
 
 .legend-dot.selected-dot {
   background: #1e293b;
+}
+
+.topik-cta-divider {
+  border-top: 1.5px solid var(--line);
+  margin: 32px 0 24px;
+}
+
+.topik-cta-card {
+  background: var(--teal);
+  text-align: center;
+  color: var(--white);
+  box-shadow: var(--shadow);
+  border-radius: 12px;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 0;
+  padding: 36px 24px;
+  display: flex;
+}
+
+.topik-cta-title, .az-panel .topik-cta-title {
+  font-family: var(--font-poppins), Poppins, sans-serif;
+  color: var(--white) !important;
+  margin: 0 !important;
+  font-size: clamp(20px, 2.5vw, 28px) !important;
+  font-weight: 700 !important;
+}
+
+.topik-cta-desc, .az-panel .topik-cta-desc {
+  font-family: var(--font-poppins), Poppins, sans-serif;
+  max-width: 680px;
+  color: #ffffffe6 !important;
+  margin: 0 0 12px !important;
+  font-size: clamp(14px, 1.5vw, 16px) !important;
+  line-height: 1.6 !important;
+}
+
+.topik-cta-btn {
+  background-color: var(--lime);
+  color: #1e293b;
+  font-family: var(--font-poppins), Poppins, sans-serif;
+  cursor: pointer;
+  transition: all .2s var(--ease-out);
+  border-radius: 30px;
+  padding: 14px 36px;
+  font-size: 15px;
+  font-weight: 700;
+  display: inline-block;
+  box-shadow: 0 4px 14px #d7e40a59;
+}
+
+.topik-cta-btn:hover {
+  background-color: #c5d209;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px #d7e40a80;
+}
+
+.topik-cta-btn:active {
+  transform: translateY(0);
+}
+
+.topik-cta-wrapper {
+  grid-column: 1 / -1;
+  width: 100%;
 }
 
 /*# sourceMappingURL=%5Broot-of-the-server%5D__0czch4-._.css.map*/
