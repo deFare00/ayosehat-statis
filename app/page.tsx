@@ -67,10 +67,48 @@ const campaigns = [
   ["Perangkat Ajar Kesehatan", "Materi edukasi sekolah", "/images/campaign-ajar.svg"]
 ];
 
+const healthEvents: Record<string, string> = {
+  // June (month index 5)
+  "5-1": "1 Juni 2026 - Hari Lahir Pancasila (Agenda: Libur Nasional)",
+  "5-5": "5 Juni 2026 - Hari Lingkungan Hidup Sedunia (Agenda: Aksi Tanam Pohon)",
+  "5-14": "14 Juni 2026 - Hari Donor Darah Sedunia (Agenda: Donor Darah Massal)",
+  "5-26": "26 Juni 2026 - Hari Anti Narkotika Internasional (Agenda: Penyuluhan Remaja)",
+  // July (month index 6)
+  "6-7": "7 Juli 2026 - Agenda: Cek Kesehatan Gratis di Puskesmas",
+  "6-11": "11 Juli 2026 - Hari Populasi Sedunia (Keluarga Berencana & Kesehatan)",
+  "6-17": "17 Juli 2026 - Hari Vitiligo Sedunia (Edukasi Kesehatan Kulit)",
+  "6-23": "23 Juli 2026 - Hari Anak Nasional (Fokus Kesehatan & Imunisasi Anak)",
+  "6-28": "28 Juli 2026 - Hari Hepatitis Sedunia (Pencegahan & Deteksi Dini)",
+  "6-29": "29 Juli 2026 - Agenda: Sosialisasi Perilaku Hidup Bersih & Sehat (PHBS)",
+  // August (month index 7)
+  "7-1": "1 Agustus 2026 - Hari ASI Sedunia (Agenda: Sosialisasi Menyusui Nasional)",
+  "7-12": "12 Agustus 2026 - Hari Remaja Internasional (Agenda: Edukasi Kesehatan mental)",
+  "7-17": "17 Agustus 2026 - Hari Kemerdekaan RI (Agenda: Libur Nasional)"
+};
+
 export default function Home() {
   const [selectedLetter, setSelectedLetter] = useState<string>("A");
   const [isExpanded, setIsExpanded] = useState<boolean>(true);
+  
+  // Calendar states
+  const [currentDate, setCurrentDate] = useState<Date>(new Date(2026, 6, 7)); // Default to July 7, 2026
+  const [selectedDate, setSelectedDate] = useState<Date>(new Date(2026, 6, 11)); // Default selected July 11, 2026
+
   const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+  
+  const monthNames = [
+    "Januari", "Februari", "Maret", "April", "Mei", "Juni",
+    "Juli", "Agustus", "September", "Oktober", "November", "Desember"
+  ];
+
+  // Helper functions for month navigation
+  const handlePrevMonth = () => {
+    setCurrentDate(new Date(currentDate.getFullYear(), currentDate.getMonth() - 1, 1));
+  };
+
+  const handleNextMonth = () => {
+    setCurrentDate(new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 1));
+  };
 
   return (
     <>
@@ -247,14 +285,87 @@ export default function Home() {
             </article>
 
             <aside className="side-stack" aria-label="Informasi kesehatan">
-              <article className="mini-panel">
-                <h3>Kalender Kesehatan</h3>
-                <p>Informasi terkait hari besar kesehatan setahun penuh.</p>
-                <div className="calendar" aria-label="Kalender November 2025">
-                  <strong>November 2025</strong>
-                  {Array.from({ length: 35 }, (_, i) => <span className={i === 10 ? "today" : ""} key={i}>{i > 4 && i < 31 ? i - 4 : ""}</span>)}
-                </div>
-              </article>
+              <div className="calendar-section-wrapper">
+                <h3 className="sidebar-section-title">Kalender Kesehatan</h3>
+                <p className="sidebar-section-subtitle">Informasi terkait dengan hari besar dan agenda kesehatan satu tahun penuh</p>
+                
+                <article className="mini-panel calendar-card">
+                  {/* Month Selector */}
+                  <div className="calendar-month-selector">
+                    <button className="month-nav-btn" aria-label="Bulan sebelumnya" onClick={handlePrevMonth} type="button">&lt;</button>
+                    <span className="current-month-year">{monthNames[currentDate.getMonth()]} {currentDate.getFullYear()}</span>
+                    <button className="month-nav-btn" aria-label="Bulan berikutnya" onClick={handleNextMonth} type="button">&gt;</button>
+                  </div>
+
+                  {/* Day Labels */}
+                  <div className="calendar-day-labels">
+                    <span>Sen</span>
+                    <span>Sel</span>
+                    <span>Rab</span>
+                    <span>Kam</span>
+                    <span>Jum</span>
+                    <span>Sab</span>
+                    <span>Min</span>
+                  </div>
+
+                  {/* Days Grid */}
+                  <div className="calendar-days-grid">
+                    {/* Render empty slots based on the first day of the month */}
+                    {Array.from({ length: currentDate.getDay() === 0 ? 6 : currentDate.getDay() - 1 }).map((_, idx) => (
+                      <span key={`empty-${idx}`} className="empty-day-cell" aria-hidden="true" />
+                    ))}
+                    
+                    {Array.from({ length: new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0).getDate() }, (_, idx) => {
+                      const dayNum = idx + 1;
+                      
+                      const today = new Date(2026, 6, 7);
+                      const isToday = today.getFullYear() === currentDate.getFullYear() && 
+                                      today.getMonth() === currentDate.getMonth() && 
+                                      dayNum === today.getDate();
+
+                      const isSelected = selectedDate.getFullYear() === currentDate.getFullYear() && 
+                                         selectedDate.getMonth() === currentDate.getMonth() && 
+                                         dayNum === selectedDate.getDate();
+
+                      const dotKey = `${currentDate.getMonth()}-${dayNum}`;
+                      const hasDot = healthEvents[dotKey] !== undefined;
+                      
+                      return (
+                        <button
+                          key={dayNum}
+                          className={`day-cell ${isToday ? "today" : ""} ${isSelected ? "selected" : ""} ${hasDot ? "has-dot" : ""}`}
+                          onClick={() => setSelectedDate(new Date(currentDate.getFullYear(), currentDate.getMonth(), dayNum))}
+                          type="button"
+                        >
+                          <span className="day-number">{dayNum}</span>
+                          {hasDot && <span className="day-dot" />}
+                        </button>
+                      );
+                    })}
+                  </div>
+
+                  {/* Selected Event Display */}
+                  <div className="calendar-event-divider" />
+                  <div className="calendar-event-display">
+                    {healthEvents[`${selectedDate.getMonth()}-${selectedDate.getDate()}`] ? (
+                      <p className="event-desc">{healthEvents[`${selectedDate.getMonth()}-${selectedDate.getDate()}`]}</p>
+                    ) : (
+                      <p className="event-placeholder">Berikut tanggal kesehatan terkait</p>
+                    )}
+                  </div>
+
+                  {/* Legend Footer */}
+                  <div className="calendar-legend-divider" />
+                  <div className="calendar-legend-footer">
+                    <span className="legend-item">
+                      <span className="legend-dot today-dot" /> Hari ini
+                    </span>
+                    <span className="legend-item">
+                      <span className="legend-dot selected-dot" /> Dipilih
+                    </span>
+                  </div>
+                </article>
+              </div>
               <article className="mini-panel">
                 <h3>Kampanye Kesehatan</h3>
                 <Image src="/images/campaign-ckg.svg" alt="Cek Kesehatan Gratis di Sekolah" width={270} height={150} sizes="(max-width: 1020px) 270px, 270px" />

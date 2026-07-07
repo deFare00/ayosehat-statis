@@ -3275,4 +3275,226 @@ button.siklus-tab-card:focus-visible {
   }
 }
 
+/* --- HEALTH CALENDAR CUSTOM INTERACTIVE STYLES --- */
+.calendar-section-wrapper {
+  margin-bottom: 24px;
+}
+
+.sidebar-section-title {
+  color: var(--teal-dark) !important;
+  font-size: 24px !important;
+  font-weight: 750 !important;
+  margin: 0 0 6px 0 !important;
+  letter-spacing: -0.2px;
+}
+
+.sidebar-section-subtitle {
+  color: var(--muted) !important;
+  font-size: 13px !important;
+  line-height: 1.5 !important;
+  margin: 0 0 16px 0 !important;
+}
+
+.calendar-card {
+  padding: 24px !important;
+  border-radius: 12px !important;
+  border: 1.5px solid var(--line) !important;
+  background: var(--white) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02) !important;
+  transform: none !important; /* Disable standard translateY on hover for calendar */
+}
+
+.calendar-card:hover {
+  border-color: var(--line) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02) !important;
+  transform: none !important;
+}
+
+.calendar-month-selector {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.month-nav-btn {
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--muted);
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: all 180ms ease;
+}
+
+.month-nav-btn:hover {
+  background: var(--soft);
+  color: var(--teal);
+}
+
+.current-month-year {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.calendar-day-labels {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #f1f5f9;
+  padding-bottom: 8px;
+}
+
+.calendar-day-labels span {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.calendar-days-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.empty-day-cell {
+  height: 40px;
+}
+
+.day-cell {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 34px;
+  width: 34px;
+  margin: auto;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 180ms var(--ease-out);
+}
+
+.day-cell .day-number {
+  font-size: 14px;
+  font-weight: 600;
+  color: #334155;
+}
+
+.day-cell:hover:not(.today):not(.selected) {
+  background: #f1f5f9;
+}
+
+/* Today style: Solid teal background, white text */
+.day-cell.today {
+  background: var(--teal);
+  box-shadow: 0 4px 10px rgba(24, 185, 177, 0.2);
+}
+
+.day-cell.today .day-number {
+  color: var(--white);
+  font-weight: 750;
+}
+
+/* Selected style: Solid black/charcoal background, white text */
+.day-cell.selected {
+  background: #1e293b;
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.15);
+}
+
+.day-cell.selected .day-number {
+  color: var(--white);
+  font-weight: 750;
+}
+
+/* Has-dot style: a small teal dot centered below the day number */
+.day-cell .day-dot {
+  position: absolute;
+  bottom: 5px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--teal);
+}
+
+/* When today is selected or today is active, dot should be white */
+.day-cell.today .day-dot,
+.day-cell.selected .day-dot {
+  background: var(--white);
+}
+
+.calendar-event-divider {
+  border-top: 1.5px solid #f1f5f9;
+  margin: 16px 0;
+}
+
+.calendar-event-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  padding: 8px 12px;
+  border: none;
+}
+
+.event-desc {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--muted);
+  text-align: center;
+  margin: 0;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+.event-placeholder {
+  font-size: 13px;
+  font-style: italic;
+  color: var(--muted);
+  text-align: center;
+  margin: 0;
+}
+
+.calendar-legend-divider {
+  border-top: 1.5px solid #f1f5f9;
+  margin: 16px 0 12px 0;
+}
+
+.calendar-legend-footer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-left: 2px;
+}
+
+.legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.legend-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.legend-dot.today-dot {
+  background: var(--teal);
+}
+
+.legend-dot.selected-dot {
+  background: #1e293b;
+}
+
 
