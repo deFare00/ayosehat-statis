@@ -940,7 +940,7 @@ h2 {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 280px;
   gap: 36px;
-  align-items: start;
+  align-items: stretch;
 }
 
 .az-panel,
@@ -960,6 +960,8 @@ h2 {
 
 .az-panel {
   padding: 38px 44px;
+  display: flex;
+  flex-direction: column;
 }
 
 .az-panel h2 {
@@ -1001,8 +1003,10 @@ h2 {
 }
 
 .side-stack {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 24px;
+  height: 100%;
 }
 
 .mini-panel {
@@ -3527,6 +3531,7 @@ button.siklus-tab-card:focus-visible {
 .topik-cta-divider {
   border-top: 1.5px solid var(--line);
   margin: 32px 0 24px 0;
+  margin-top: auto;
 }
 
 .topik-cta-card {
@@ -3593,7 +3598,7 @@ button.siklus-tab-card:focus-visible {
 
 /* --- CAMPAIGN SLIDER STYLES --- */
 .campaign-slider-wrapper {
-  margin-top: 12px;
+  margin-top: auto;
   outline: none;
 }
 
