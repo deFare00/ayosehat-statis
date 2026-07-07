@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 
 const menuItems = [
   { label: "Tentang", icon: "/images/info-circle.svg", href: "/tentang", activePath: "/tentang" },
-  { label: "Topik", icon: "/images/category.svg", href: "/#topik" },
+  { label: "Topik", icon: "/images/category.svg", href: "/topik", activePath: "/topik" },
   { label: "Siklus Hidup", icon: "/images/3-user.svg", href: "/#siklus-hidup" },
   { label: "Hidup Sehat", icon: "/images/heart.svg", href: "/#hidup-sehat" },
   { label: "Kampanye", icon: "/images/activity.svg", href: "/#kampanye" },

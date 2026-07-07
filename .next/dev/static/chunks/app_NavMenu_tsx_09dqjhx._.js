@@ -8,74 +8,62 @@ __turbopack_context__.s([
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/image.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/navigation.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
 "use client";
 ;
 ;
+;
 const menuItems = [
     {
         label: "Tentang",
         icon: "/images/info-circle.svg",
-        href: "#tentang"
+        href: "/tentang",
+        activePath: "/tentang"
     },
     {
         label: "Topik",
         icon: "/images/category.svg",
-        href: "#topik"
+        href: "/topik",
+        activePath: "/topik"
     },
     {
         label: "Siklus Hidup",
         icon: "/images/3-user.svg",
-        href: "#siklus-hidup"
+        href: "/#siklus-hidup"
     },
     {
         label: "Hidup Sehat",
         icon: "/images/heart.svg",
-        href: "#hidup-sehat"
+        href: "/#hidup-sehat"
     },
     {
         label: "Kampanye",
         icon: "/images/activity.svg",
-        href: "#kampanye"
+        href: "/#kampanye"
     },
     {
         label: "Kegiatan",
         icon: "/images/calendar.svg",
-        href: "#kegiatan"
+        href: "/#kegiatan"
     },
     {
         label: "Download",
         icon: "/images/download.svg",
-        href: "#download"
+        href: "/#download"
     },
     {
         label: "Kemitraan",
         icon: "/images/Document.svg",
-        href: "#kemitraan"
+        href: "/#kemitraan"
     }
 ];
 function NavMenu() {
     _s();
-    const [activeHref, setActiveHref] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("#tentang");
     const [isMenuOpen, setIsMenuOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
-        "NavMenu.useEffect": ()=>{
-            const updateActiveFromHash = {
-                "NavMenu.useEffect.updateActiveFromHash": ()=>{
-                    if (window.location.hash) {
-                        setActiveHref(window.location.hash);
-                    }
-                }
-            }["NavMenu.useEffect.updateActiveFromHash"];
-            updateActiveFromHash();
-            window.addEventListener("hashchange", updateActiveFromHash);
-            return ({
-                "NavMenu.useEffect": ()=>window.removeEventListener("hashchange", updateActiveFromHash)
-            })["NavMenu.useEffect"];
-        }
-    }["NavMenu.useEffect"], []);
+    const pathname = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["usePathname"])();
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "NavMenu.useEffect": ()=>{
             document.body.classList.toggle("mobile-menu-open", isMenuOpen);
@@ -86,14 +74,13 @@ function NavMenu() {
     }["NavMenu.useEffect"], [
         isMenuOpen
     ]);
-    const renderMenuLinks = ()=>menuItems.map((item)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                className: activeHref === item.href ? "active" : "",
+    const renderMenuLinks = ()=>menuItems.map((item)=>{
+            const isActive = item.activePath === pathname;
+            return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                className: isActive ? "active" : "",
                 href: item.href,
-                "aria-current": activeHref === item.href ? "page" : undefined,
-                onClick: ()=>{
-                    setActiveHref(item.href);
-                    setIsMenuOpen(false);
-                },
+                "aria-current": isActive ? "page" : undefined,
+                onClick: ()=>setIsMenuOpen(false),
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                         className: "menu-icon",
@@ -101,25 +88,27 @@ function NavMenu() {
                         alt: "",
                         width: 42,
                         height: 42,
+                        sizes: "(max-width: 760px) 40px, 42px",
                         "aria-hidden": "true"
                     }, void 0, false, {
                         fileName: "[project]/app/NavMenu.tsx",
-                        lineNumber: 52,
-                        columnNumber: 9
+                        lineNumber: 40,
+                        columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                         children: item.label
                     }, void 0, false, {
                         fileName: "[project]/app/NavMenu.tsx",
-                        lineNumber: 53,
-                        columnNumber: 9
+                        lineNumber: 41,
+                        columnNumber: 11
                     }, this)
                 ]
             }, item.label, true, {
                 fileName: "[project]/app/NavMenu.tsx",
-                lineNumber: 42,
-                columnNumber: 7
-            }, this));
+                lineNumber: 33,
+                columnNumber: 9
+            }, this);
+        });
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "nav-menu",
         children: [
@@ -135,7 +124,7 @@ function NavMenu() {
                         children: "Menu"
                     }, void 0, false, {
                         fileName: "[project]/app/NavMenu.tsx",
-                        lineNumber: 67,
+                        lineNumber: 56,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -143,13 +132,13 @@ function NavMenu() {
                         "aria-hidden": "true"
                     }, void 0, false, {
                         fileName: "[project]/app/NavMenu.tsx",
-                        lineNumber: 68,
+                        lineNumber: 57,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/NavMenu.tsx",
-                lineNumber: 59,
+                lineNumber: 48,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -157,7 +146,7 @@ function NavMenu() {
                 children: renderMenuLinks()
             }, void 0, false, {
                 fileName: "[project]/app/NavMenu.tsx",
-                lineNumber: 71,
+                lineNumber: 60,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -166,7 +155,7 @@ function NavMenu() {
                 onClick: ()=>setIsMenuOpen(false)
             }, void 0, false, {
                 fileName: "[project]/app/NavMenu.tsx",
-                lineNumber: 73,
+                lineNumber: 62,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -180,7 +169,7 @@ function NavMenu() {
                                 children: "Menu"
                             }, void 0, false, {
                                 fileName: "[project]/app/NavMenu.tsx",
-                                lineNumber: 80,
+                                lineNumber: 69,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -192,18 +181,18 @@ function NavMenu() {
                                     "aria-hidden": "true"
                                 }, void 0, false, {
                                     fileName: "[project]/app/NavMenu.tsx",
-                                    lineNumber: 82,
+                                    lineNumber: 71,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/NavMenu.tsx",
-                                lineNumber: 81,
+                                lineNumber: 70,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/NavMenu.tsx",
-                        lineNumber: 79,
+                        lineNumber: 68,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -211,23 +200,27 @@ function NavMenu() {
                         children: renderMenuLinks()
                     }, void 0, false, {
                         fileName: "[project]/app/NavMenu.tsx",
-                        lineNumber: 85,
+                        lineNumber: 74,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/NavMenu.tsx",
-                lineNumber: 78,
+                lineNumber: 67,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/NavMenu.tsx",
-        lineNumber: 58,
+        lineNumber: 47,
         columnNumber: 5
     }, this);
 }
-_s(NavMenu, "DelSBvKieBgALZy3nU34LMmdrvA=");
+_s(NavMenu, "CzNffnDTivcGunCbOdL491U5+og=", false, function() {
+    return [
+        __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["usePathname"]
+    ];
+});
 _c = NavMenu;
 var _c;
 __turbopack_context__.k.register(_c, "NavMenu");

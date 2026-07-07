@@ -106,7 +106,7 @@ var __TURBOPACK__imported__module__$5b$next$5d2f$internal$2f$font$2f$google$2f$i
 ;
 ;
 const metadata = {
-    title: "Ayosehat",
+    title: "Ayo Sehat - Portal Kesehatan Keluarga Indonesia",
     description: "Ayo Sehat Kementerian Kesehatan Republik Indonesia, portal statis berisi informasi kesehatan, siklus hidup, topik A-Z, kampanye, dan artikel terbaru.",
     keywords: [
         "Ayo Sehat",
@@ -116,9 +116,17 @@ const metadata = {
         "artikel kesehatan"
     ],
     metadataBase: new URL("https://ayosehat.kemkes.go.id"),
+    icons: {
+        icon: "/images/kemenkes-logo.png",
+        shortcut: "/images/kemenkes-logo.png",
+        apple: "/images/kemenkes-logo.png"
+    },
     openGraph: {
-        title: "Ayosehat",
+        title: "Ayo Sehat - Portal Kesehatan Keluarga Indonesia",
         description: "Portal informasi kesehatan untuk masyarakat Indonesia dari Kementerian Kesehatan Republik Indonesia.",
+        images: [
+            "/images/kemenkes-logo.png"
+        ],
         type: "website",
         locale: "id_ID"
     }
@@ -136,12 +144,12 @@ function RootLayout({ children }) {
             children: children
         }, void 0, false, {
             fileName: "[project]/app/layout.tsx",
-            lineNumber: 50,
+            lineNumber: 56,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/app/layout.tsx",
-        lineNumber: 49,
+        lineNumber: 55,
         columnNumber: 5
     }, this);
 }
