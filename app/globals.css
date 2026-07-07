@@ -304,6 +304,7 @@ img {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  animation: heroReveal 900ms var(--ease-out) both;
 }
 
 .hero-content {
@@ -318,6 +319,29 @@ img {
   padding: 56px 0 34px;
 }
 
+.hero-copy h1,
+.hero-copy h2,
+.hero-copy p,
+.hero-copy .button {
+  animation: heroContentIn 760ms var(--ease-out) both;
+}
+
+.hero-copy h1 {
+  animation-delay: 120ms;
+}
+
+.hero-copy h2 {
+  animation-delay: 220ms;
+}
+
+.hero-copy p {
+  animation-delay: 340ms;
+}
+
+.hero-copy .button {
+  animation-delay: 480ms;
+}
+
 .hero-copy h1 {
   margin: 0 0 10px;
   font-family: var(--font-poppins), Poppins, Arial, Helvetica, sans-serif;
@@ -325,6 +349,30 @@ img {
   font-weight: 700;
   line-height: 1.04;
   letter-spacing: 0;
+}
+
+@keyframes heroReveal {
+  from {
+    filter: saturate(0.86) brightness(0.9);
+    transform: scale(1.025);
+  }
+
+  to {
+    filter: saturate(1) brightness(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes heroContentIn {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .hero-copy h2 {
