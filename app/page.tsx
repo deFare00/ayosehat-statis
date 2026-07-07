@@ -68,18 +68,18 @@ export default function Home() {
         <div className="header-quick-links" aria-label="Tautan cepat">
           {socialLinks.map((item) => (
             <a className="social-link" href="#kontak" aria-label={item.label} key={item.label}>
-              <Image src={item.icon} alt="" width={11} height={11} aria-hidden="true" />
+              <Image src={item.icon} alt="" width={16} height={16} sizes="16px" aria-hidden="true" />
             </a>
           ))}
           <a className="quick-text-link" href="#kontak">Kontak</a>
           <a className="quick-text-link login-link" href="#login">
-            <Image src="/images/Profile.svg" alt="" width={16} height={16} aria-hidden="true" />
+            <Image src="/images/Profile.svg" alt="" width={22} height={22} sizes="22px" aria-hidden="true" />
             <span>Login</span>
           </a>
         </div>
         <nav className="navbar" aria-label="Menu utama">
           <Link className="brand nav-brand" href="/" aria-label="Beranda Kemenkes Ayo Sehat">
-            <Image src="/images/kemenkes-ayosehat.png" alt="Kemenkes Ayo Sehat" width={220} height={66} priority />
+            <Image src="/images/kemenkes-ayosehat.png" alt="Kemenkes Ayo Sehat" width={220} height={66} sizes="(max-width: 760px) 170px, 220px" priority />
           </Link>
           <NavMenu />
         </nav>
@@ -126,7 +126,7 @@ export default function Home() {
             <div className="life-grid">
               {lifeStages.map((stage) => (
                 <a className="life-card" href="#artikel" key={stage.title}>
-                  <Image src={stage.image} alt={stage.title} width={274} height={270} />
+                  <Image src={stage.image} alt={stage.title} width={274} height={270} sizes="274px" />
                   <div className="life-label">
                     <strong>{stage.title}</strong>
                     <span>{stage.age}</span>
@@ -149,7 +149,7 @@ export default function Home() {
               <div className="habit-list">
                 {habits.slice(0, 3).map((habit) => <HabitItem key={habit.title} habit={habit} side="left" />)}
               </div>
-              <Image className="habit-image" src="/images/perilaku-hidup-sehat.png" alt="Keluarga melakukan gaya hidup sehat" width={520} height={520} />
+              <Image className="habit-image" src="/images/perilaku-hidup-sehat.png" alt="Keluarga melakukan gaya hidup sehat" width={520} height={520} sizes="(max-width: 760px) 76vw, (max-width: 1020px) 520px, 34vw" />
               <div className="habit-list">
                 {habits.slice(3).map((habit) => <HabitItem key={habit.title} habit={habit} side="right" />)}
               </div>
@@ -168,7 +168,7 @@ export default function Home() {
                   <a className={index === 0 ? "selected" : ""} href="#artikel" key={letter}>{letter}</a>
                 ))}
               </div>
-              <Image className="topic-image" src="/images/doctor-notes.svg" alt="Dokter menulis catatan kesehatan" width={760} height={190} />
+              <Image className="topic-image" src="/images/doctor-notes.svg" alt="Dokter menulis catatan kesehatan" width={760} height={190} sizes="(max-width: 760px) calc(100vw - 68px), (max-width: 1020px) calc(100vw - 88px), 760px" />
             </article>
             <aside className="side-stack" aria-label="Informasi kesehatan">
               <article className="mini-panel">
@@ -181,7 +181,7 @@ export default function Home() {
               </article>
               <article className="mini-panel">
                 <h3>Kampanye Kesehatan</h3>
-                <Image src="/images/campaign-ckg.svg" alt="Cek Kesehatan Gratis di Sekolah" width={270} height={150} />
+                <Image src="/images/campaign-ckg.svg" alt="Cek Kesehatan Gratis di Sekolah" width={270} height={150} sizes="(max-width: 1020px) 270px, 270px" />
                 <p>Cek Kesehatan Gratis (CKG) di Sekolah</p>
               </article>
             </aside>
@@ -197,7 +197,7 @@ export default function Home() {
             <div className="article-grid">
               {articles.map(([title, tag, image]) => (
                 <article className="article-card" key={title}>
-                  <Image src={image} alt="" width={360} height={190} />
+                  <Image src={image} alt="" width={360} height={190} sizes="(max-width: 760px) calc(100vw - 28px), (max-width: 1020px) 33vw, 360px" />
                   <span>{tag}</span>
                   <h3>{title}</h3>
                   <p>18 Jul 2025 • Waktu Baca 3 Menit</p>
@@ -212,7 +212,7 @@ export default function Home() {
           <div className="container campaign-grid">
             {campaigns.map(([title, text, image]) => (
               <article className="campaign-card" key={title}>
-                <Image src={image} alt={title} width={310} height={230} />
+                <Image src={image} alt={title} width={310} height={230} sizes="(max-width: 760px) calc(100vw - 84px), (max-width: 1020px) 33vw, 310px" />
                 <h3>{title}</h3>
                 <p>{text}</p>
               </article>
@@ -254,7 +254,7 @@ function HabitItem({
         <p>{habit.text}</p>
       </div>
       <span className="habit-icon" aria-hidden="true">
-        <Image src={habit.icon} alt="" width={72} height={72} />
+        <Image src={habit.icon} alt="" width={72} height={72} sizes="(max-width: 760px) 40px, 72px" />
       </span>
     </article>
   );

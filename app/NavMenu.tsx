@@ -49,7 +49,7 @@ export default function NavMenu() {
           setIsMenuOpen(false);
         }}
       >
-        <Image className="menu-icon" src={item.icon} alt="" width={42} height={42} aria-hidden="true" />
+        <Image className="menu-icon" src={item.icon} alt="" width={42} height={42} sizes="(max-width: 760px) 40px, 42px" aria-hidden="true" />
         <span>{item.label}</span>
       </a>
     ));
